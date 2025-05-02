@@ -1,61 +1,40 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+### Deskripsi
+Proyek sistem gudang ini diinisiasi dengan framework laravel untuk kebutuhan technical test menggunakan konsep rest api. Metode login menerapkan sistem token menggunakan laravel sanctum
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### Role
+terbagi menjadi 2 role, yaitu admin dan user. admin memiliki hak istimewa lain untuk manajemen user seperti memblokir user, restore user, promote user, add user.
 
-## About Laravel
+### Fitur Proyek
+1. CRUD Category
+2. CRUD Product
+3. CRUD Mutation
+4. User Management
+5. Authentication dan Authorization
+6. Pagination dan searching
+7. Soft Delete (Trashed dan Restore)
+8. Audit Trail (Data product dan category)
+9. Validation Form
+10. Upload File (data product dan update profile)
+11. Penerapan UUID (attribute code pada table products)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Persiapan file .env 
+1. setelah download proyek ke local, copas file .env.example
+2. tambahkan APP_TIMEZONE=Asia/Jakarta
+3. tambahkan SCOUT_DRIVER=database
+4. ubah APP_URL=http://localhost:8000 atau value lain (harus sesuai dengan base url ketika running)
+5. ubah APP_FAKER_LOCALE=id_ID (optional)
+6. ubah FILESYSTEM_DISK=public
+7. ubah konfigurasi database, rekomendasi gunakan mysql >=8
+8. ubah APP_NAME=Sistem_Gudang (optional)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Installasi di terminal
+1. composer install
+2. php artisan key:generate
+3. php artisan storage:link
+4. php artisan migrate --seed (untuk pertama kali migrate)
+5. php artisan migrate:fresh --seed (untuk refresh dan migrate ulang)
+6. php artisan serve 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Link
+1. postman [https://documenter.getpostman.com/view/19885257/2sB2j4gBTV]
+2. github [https://github.com/ganden16/clavata-sistem-gudang]

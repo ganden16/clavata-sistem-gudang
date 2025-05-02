@@ -12,11 +12,11 @@ use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('auth')->group(function () {
-	Route::get('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
+	Route::get('/me', [AuthController::class, 'me']);
 	Route::post('/login', [AuthController::class, 'login']);
-	Route::delete('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
-	Route::put('/update-profile', [AuthController::class, 'updateProfile'])->middleware('auth:sanctum');
-	Route::put('/change-password', [AuthController::class, 'changePassword'])->middleware('auth:sanctum');
+	Route::delete('/logout', [AuthController::class, 'logout']);
+	Route::put('/update-profile', [AuthController::class, 'updateProfile']);
+	Route::put('/change-password', [AuthController::class, 'changePassword']);
 });
 
 Route::prefix('mutations')->group(function () {
